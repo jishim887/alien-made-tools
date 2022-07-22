@@ -5,10 +5,15 @@ function About(){
    return (
       <Container>
          <Card className= "page-card">
-            <h1>About Us</h1>
-            <p>
-               Alien Made Tools is a company that strives to provide top-industry tools for the most demanding, intricate operations all over the world.
-            </p>      
+            <Card.Header>
+               <h1>About Us</h1>
+            </Card.Header>
+            <Card.Body>
+               <p>
+                  Alien Made Tools is a company that strives to provide top-industry tools for the most demanding, intricate operations all over the world.
+               </p>
+            </Card.Body>
+                  
          </Card>
       </Container>
    )
