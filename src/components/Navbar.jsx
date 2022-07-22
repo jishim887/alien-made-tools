@@ -17,7 +17,7 @@ function Navbar(){
          <Container>
             <a className="navbar-brand" href="/">
                <Twemoji options={{ className: 'twemoji' }}>
-                  🛠
+                  👽
                </Twemoji>
             </a>
             <button
