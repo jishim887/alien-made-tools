@@ -1,8 +1,14 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
+
 import {Row, Col, Container} from "react-bootstrap";
 import "./landing.css"
 
 function Landing(){
+   const navigate = useNavigate();
+   const goToPage = (e) => {
+      navigate(e.currentTarget.dataset.page);
+   };
    return (
       <div className="landing">
          <div className="landing-top d-flex align-items-center">
@@ -11,7 +17,7 @@ function Landing(){
                   <Col>
                     <h1 className="text-white">Alien Tools</h1>
                     <h4>Explore our premium grade products today</h4>
-                    <button className="btn primary-color text-white">Products</button>
+                    <button className="landing-button btn primary-color text-white" data-page="/products" onClick = {goToPage}>Products</button>
                   </Col>
                </Row>
             </Container>

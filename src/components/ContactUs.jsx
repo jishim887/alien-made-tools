@@ -4,7 +4,7 @@ import {Container, Card} from "react-bootstrap";
 function ContactUs(){
    return (
       <Container>
-         <Card>
+         <Card className= "page-card">
             <Card.Header>
                <h1>
                   Contact Us

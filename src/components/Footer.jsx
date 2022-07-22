@@ -6,7 +6,7 @@ function Footer(){
     <React.Fragment>
       <footer className="primary-color text-white fixed-bottom landing-footer">
          <div className="container">
-            Footer Incorporated © 2022
+            Alien Made Tools © 2022
          </div>
       </footer>
     </React.Fragment>

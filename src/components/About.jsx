@@ -1,18 +1,14 @@
 import React from "react";
-import {Container, Row, Col, Card} from "react-bootstrap";
+import {Container, Card} from "react-bootstrap";
 
 function About(){
    return (
       <Container>
-         <Card>
-            <Row>
-               <Col>
-               picture here
-               </Col>
-               <Col>
-               This a company that makes cool products. We really care about the stuff we make
-               </Col>
-            </Row>
+         <Card className= "page-card">
+            <h1>About Us</h1>
+            <p>
+               Alien Made Tools is a company that strives to provide top-industry tools for the most demanding, intricate operations all over the world.
+            </p>      
          </Card>
       </Container>
    )

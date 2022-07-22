@@ -21,7 +21,7 @@ function Product(){
    const [typeSelection, setTypeSelection] = useState([])
    return (
       <Container>
-         <Card>
+         <Card className= "page-card">
             <Card.Header>
                <h1>
                   Products
