@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+   /* background-color: #f6f4ee; */
+   background-image:  linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff), linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff), linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff), linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff), linear-gradient(60deg, rgba(255,255,255,0.5) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.5) 75%, rgba(255,255,255,0.5)), linear-gradient(60deg, rgba(255,255,255,0.5) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.5) 75%, rgba(255,255,255,0.5));
+background-size: 62px 108.5px;
+background-position: 0 0, 0 0, 31px 54.25px, 31px 54.25px, 0 0, 31px 54.25px;
+background-color: #e4e4e4;
 }
+button.link-button {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   text-decoration: underline;
+   display: inline;
+   /* margin: 0;
+   padding: 0; */
+   text-decoration: none;
+ }
+ 
+ .link-button:hover,
+ .link-button:focus {
+   text-decoration: none;
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ /* https://colorpalettes.net/color-palette-4095/ */
+ .primary-color{
+   background-color: #5f010a;
+ }
+ .secondary-color{
+   background-color: #31465a;
+ }
+ .dark-color{
+   background-color: #2d180f;
+ }
+ .alert-color{
+   background-color: #b10207;
+ }
+ /* https://colorpalettes.net/color-palette-3953/ */
+ .success-color{
+   background-color: #5d9700;
+ }
+ .light-color{
+   background-color: #d7ecf4;
+ }
+ /* https://colorpalettes.net/color-palette-4347/ */
+ .warning-color{
+   background-color: #D06F1D;
+ }

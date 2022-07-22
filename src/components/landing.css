@@ -1,0 +1,44 @@
+.landing-footer{
+   padding-top: 24px;
+   padding-bottom: 24px;
+}
+.navbar{
+   font-size:x-large;
+}
+.landing .row{
+   padding: 0px;
+   margin: 0px;
+}
+.landing > .row{
+   height: 15%;
+   padding: 0px;
+   margin: 0px;
+}
+.landing .col{
+   padding: 0px;
+   margin: 0px;
+}
+.landing-top{
+   height: 600px;
+   background-image: linear-gradient(white,white), url(https://cdn.pixabay.com/photo/2020/10/07/12/32/warehouse-5635000_960_720.jpg);
+   background-blend-mode:saturation;
+   background-size: cover;
+
+   background-repeat:no-repeat;
+   color: white;
+}
+.topbar-email{
+   margin-left: 6px;
+   color: rgb(177, 237, 254);
+}
+.landing .col-sm-6{
+   padding: 0px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.landing .col-sm-6 img{ 
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
