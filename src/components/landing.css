@@ -27,9 +27,6 @@
    background-repeat:no-repeat;
    color: white;
 }
-.landing-button:hover{
-   background-color:#2c0004;
-}
 .topbar-email{
    margin-left: 6px;
    color: rgb(177, 237, 254);

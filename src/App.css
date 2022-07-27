@@ -49,8 +49,16 @@ button.link-button {
  .page-card{
    margin-top: 50px;
    margin-bottom: 50px;
-   padding-right:10%;
-   padding-left:10%;
+   padding-right:50px;
+   padding-left:50px;
    padding-top: 30px;
    padding-bottom: 30px;
+ }
+
+ button.primary-color{
+   color:white;
+ }
+ button.primary-color:hover{
+   background-color: #400006;
+   color:white;
  }

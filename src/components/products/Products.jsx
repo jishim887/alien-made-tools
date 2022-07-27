@@ -1,10 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React,{useEffect, useState, useCallback} from "react";
-import {Container, Card, Row, Col} from "react-bootstrap";
+import {Container, Card, Row, Col, Offcanvas, OffcanvasHeader, OffcanvasBody} from "react-bootstrap";
 import Select from 'react-select';
 import {productsList} from "./productsList"
 import ProductCard from "./ProductCard";
 import Pagination from "rc-pagination";
 import 'rc-pagination/assets/index.css';
+import "./products.css";
 
 function Product(){
    const [productTypes] = useState([
@@ -37,6 +39,9 @@ function Product(){
       data:[],
       cards:[]
    })
+   const [show, setShow] = useState(false);
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
 
    useEffect(()=>{
       let prodData = [...productsList];
@@ -85,40 +90,54 @@ function Product(){
 
    return (
       <Container>
-         <Card className= "page-card">
+         <Card className= "page-card product">
+            <Offcanvas 
+               show={show} 
+               onHide={handleClose}
+               // backdrop={false}
+               >
+               <OffcanvasHeader
+                  closeButton>
+                  Text
+               </OffcanvasHeader>
+               <OffcanvasBody>
+                  <Select
+                     isMulti
+                     options={productTypes}
+                     className="basic-multi-select"
+                     classNamePrefix="select"
+                     defaultValue={typeSelection}
+                     onChange={setTypeSelection}
+                     />
+               </OffcanvasBody>
+            </Offcanvas>
             <Card.Body>
                <h1>
                   Products
                </h1>
                <Row>
-                  <Col md={3}>
-                     Filter by product type
-                     <Select
-                        isMulti
-                        options={productTypes}
-                        className="basic-multi-select"
-                        classNamePrefix="select"
-                        defaultValue={typeSelection}
-                        onChange={setTypeSelection}
-                     />
-                  </Col>
-                  <Col md={9} className="text-center">
+                  <Col className="product-row text-center product-col d-flex justify-content-between align-items-center">
+                     <button 
+                        className="btn btn-sm primary-color"
+                        onClick={handleShow}
+                        >Filter Options</button>
                      <Pagination
                         onChange={onPageChange}
                         current={products.index}
                         pageSize={products.size}
                         total={products.total}
-                     />
-                     <Row className="d-flex, justify-content-between">
-                        {products.cards}
-                        {!products.data[0] &&
-                        <div style={{height:"500px"}}>
-                           <h4>No results</h4>
-                        </div>
-                        }
-                     </Row>
+                     />  
                   </Col>
                </Row>
+               <Row className="product-row d-flex justify-content-around">
+                  {!products.data[0] &&
+                     <div style={{height:"500px"}}>
+                        <h4>No results</h4>
+                     </div>
+                  }   
+                     {products.cards} 
+               </Row>
+               
             </Card.Body>
          </Card>
       </Container>
