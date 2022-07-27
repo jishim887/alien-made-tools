@@ -6,6 +6,7 @@ import Footer from "./components/Footer"
 import Landing from "./components/Landing"
 import About from "./components/About"
 import Products from "./components/products/Products"
+import ProductDetail from "./components/products/ProductDetail"
 import ContactUs from "./components/ContactUs"
 
 import './App.css';
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Landing/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/products" element={<Products/>}/>
+            <Route path="/products/:id" element={<ProductDetail/>}/>
             <Route path="/contactus" element={<ContactUs/>}/>
          </Routes>
       </main>

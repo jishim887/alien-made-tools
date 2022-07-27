@@ -5,12 +5,10 @@ function ContactUs(){
    return (
       <Container>
          <Card className= "page-card">
-            <Card.Header>
+            <Card.Body>
                <h1>
                   Contact Us
                </h1>
-            </Card.Header>
-            <Card.Body>
                For any business inquiries and purchases, please contact us at <a href="mailto:email@email.com">email@email.com</a>
                <p>
                   Business Hours {"(Pacific Time):"}

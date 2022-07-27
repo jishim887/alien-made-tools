@@ -4,7 +4,7 @@ import "./landing.css";
 function Footer(){
   return (
     <React.Fragment>
-      <footer className="primary-color text-white fixed-bottom landing-footer">
+      <footer className="primary-color text-white landing-footer">
          <div className="container">
             Alien Made Tools © 2022
          </div>
