@@ -10,14 +10,15 @@ import floorprep001 from "../../assets/images/products/floorprep/floorprep (1).p
 import floorprep002 from "../../assets/images/products/floorprep/floorprep (2).png"
 import coredrill001 from "../../assets/images/products/coredrill/coredrill (1).png"
 import coredrill002 from "../../assets/images/products/coredrill/coredrill (2).png"
-import coredrill003 from "../../assets/images/products/coredrill/coredrill (3).png"
+// import coredrill003 from "../../assets/images/products/coredrill/coredrill (3).png"
 
+import machine001 from "../../assets/images/products/machine/machine (1).png"
+import machine003 from "../../assets/images/products/machine/machine (3).png"
 
-
-const productsList = [
+const stoneList = [
    {
       id: 1,
-      name: "Stone 1",
+      name: "STONE TURBO CUP WHEEL",
       image: stone001,
       type:[
          "Stone",
@@ -26,7 +27,7 @@ const productsList = [
    },
    {
       id: 2,
-      name: "Stone 2",
+      name: "DRY CORE DRILL",
       image: stone002,
       type:[
          "Stone",
@@ -35,8 +36,8 @@ const productsList = [
    },
    {
       id: 3,
-      name: "Stone 3",
-      image: stone003,
+      name: "DRY CORE DRILL WITH SIDE PROTECTION",
+      image: "",
       type:[
          "Stone",
       ],
@@ -44,16 +45,36 @@ const productsList = [
    },
    {
       id: 4,
-      name: "Stone 4",
-      image: stone004,
+      name: "DRY Turbo SHAPE CORE DRILL WITH SIDE PROTECTION",
+      image: stone003,
       type:[
          "Stone",
       ],
       table:"",
    },
    {
+      id: 5,
+      name: "DRY Turbo SHAPE",
+      image: stone003,
+      type:[
+         "Stone",
+      ],
+      table:"",
+   },
+   {
+      id: 6,
+      name: "DRY T SHAPE CORE DRILL WITH SIDE PROTECTION",
+      image: stone004,
+      type:[
+         "Stone",
+      ],
+      table:"",
+   },
+];
+const constructionList = [
+   {
       id: 1001,
-      name: "Construction 1",
+      name: "LASER TURBO SEGMENTED BLADES FOR CONCRETE",
       image: construction001,
       type:[
          "Construction",
@@ -62,7 +83,7 @@ const productsList = [
    },
    {
       id: 1002,
-      name: "Construction 2",
+      name: "LASER SEGMENTED BLADES FOR CONCRETE",
       image: construction002,
       type:[
          "Construction",
@@ -71,7 +92,7 @@ const productsList = [
    },
    {
       id: 1003,
-      name: "Construction 3",
+      name: "SINTERED SEGMENTED BLADES FOR GRNERAL PURPOSE",
       image: construction003,
       type:[
          "Construction",
@@ -80,16 +101,18 @@ const productsList = [
    },
    {
       id: 1004,
-      name: "Construction 4",
+      name: "ASPHALT & GREEN CONCRETE BLADES - LOW HP SAW - LASER",
       image: construction004,
       type:[
          "Construction",
       ],
       table:"",
    },
+];
+const floorprepList = [
    {
       id: 2001,
-      name: "Floor Prep 1",
+      name: '3" Wet Dry Resin PAD',
       image: floorprep001,
       type:[
          "Floor Prep",
@@ -98,16 +121,18 @@ const productsList = [
    },
    {
       id: 2002,
-      name: "Floor Prep 2",
+      name: '3" 3STEP Wet Dry Resin PAD',
       image: floorprep002,
       type:[
          "Floor Prep",
       ],
       table:"",
    },
+];
+const coredrillList = [
    {
       id: 3001,
-      name: "Core Drill 1",
+      name: "PROFESSIONAL - Brazing ( M segment)",
       image: coredrill001,
       type:[
          "Core Drill",
@@ -116,7 +141,7 @@ const productsList = [
    },
    {
       id: 3002,
-      name: "Core Drill 2",
+      name: `PROFESSIONAL - Brazing (M core drillx 18" Length)`,
       image: coredrill002,
       type:[
          "Core Drill",
@@ -125,13 +150,44 @@ const productsList = [
    },
    {
       id: 3003,
-      name: "Core Drill 3",
-      image: coredrill003,
+      name: `PROFESSIONAL - Brazing (X- Dry core drill x 14.5" Length)`,
+      image: "",
       type:[
          "Core Drill",
       ],
       table:"",
    },
-]
+   {
+      id: 3004,
+      name: `PROFESSIONAL - Brazing ( V segment)`,
+      image: "",
+      type:[
+         "Core Drill",
+      ],
+      table:"",
+   },
+];
+const machineList= [
+   {
+      id: 4001,
+      name: "Core Drill Machine Set 110V",
+      image: machine001,
+      type:[
+         "Machine",
+      ],
+      table:"",
+   },
+   {
+      id: 4002,
+      name: "Floor Grinding & Vacuum",
+      image: machine003,
+      type:[
+         "Machine",
+      ],
+      table:"",
+   },
+];
+
+const productsList = stoneList.concat(constructionList, floorprepList, coredrillList, machineList)
 
 export {productsList};

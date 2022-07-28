@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import {Container, Card, Row, Col} from "react-bootstrap"
 import {useLocation, useParams, Link} from "react-router-dom"
 import {productsList} from "./productsList"
+import noimage from "../../assets/images/products/noimage.jpg"
+
 
 import "./products.css";
 
@@ -50,7 +52,7 @@ function ProductDetail(){
                <Row className="mb-3">
                   <Col>
                      <h1>{product.name}</h1>
-                     <img src={product.image} alt="product detail"/>
+                     <img src={product.image||noimage} alt="product detail"/>
                   </Col>
                </Row>
                <Row>

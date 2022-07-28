@@ -2,6 +2,8 @@ import React from "react";
 import {useNavigate} from "react-router-dom"
 import {Card} from "react-bootstrap";
 import "./products.css";
+import noimage from "../../assets/images/products/noimage.jpg"
+
 
 function ProductCard(props){
    const navigate = useNavigate();
@@ -13,7 +15,7 @@ function ProductCard(props){
 
    return (
       <Card className="product-card" onClick={onCardClick} data-page={props.product.id}>
-         <img src={props.product.image} alt="product"/>
+         <img src={props.product.image || noimage} alt="product"/>
          <Card.Body>
             <h4>{props.product.name}</h4>
          </Card.Body>

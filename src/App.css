@@ -53,12 +53,17 @@ button.link-button {
    padding-left:50px;
    padding-top: 30px;
    padding-bottom: 30px;
+   min-height:400px;
  }
 
  button.primary-color{
    color:white;
  }
  button.primary-color:hover{
+   background-color: #400006;
+   color:white;
+ }
+ button.primary-color:focus{
    background-color: #400006;
    color:white;
  }

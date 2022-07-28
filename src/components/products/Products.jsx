@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React,{useEffect, useState, useCallback} from "react";
-import {Container, Card, Row, Col, Offcanvas, OffcanvasHeader, OffcanvasBody} from "react-bootstrap";
+import {Container, Card, Row, Col, Offcanvas, OffcanvasHeader, OffcanvasBody, Form} from "react-bootstrap";
 import Select from 'react-select';
 import {productsList} from "./productsList"
 import ProductCard from "./ProductCard";
@@ -39,11 +39,20 @@ function Product(){
       data:[],
       cards:[]
    })
+   const [searchbar, setSearchbar] = useState({
+      search:""
+   });
    const [show, setShow] = useState(false);
    const handleClose = () => setShow(false);
    const handleShow = () => setShow(true);
 
    useEffect(()=>{
+      if (searchbar.search){
+         return;
+      }
+      setSearchbar((prevState)=>{
+         return {...prevState, search:""}
+      });
       let prodData = [...productsList];
       if (typeSelection[0]){
          prodData = prodData.filter(filterProductByOption);
@@ -62,7 +71,7 @@ function Product(){
          newCards.cards = prodCards.filter(filterCardByPage);
          return newCards;
       });
-      const filterCardByPage = (card, i) => {
+      function filterCardByPage(card, i) {
          let startIndex = products.size*(index);
          let endIndex = products.size*(index+1);
          return (i >= startIndex && i < endIndex) 
@@ -87,6 +96,26 @@ function Product(){
       const prodCopy = [...products.data]
       updateProductCards(page-1, length, prodCopy);
    }
+   const onFieldChange = (e) =>{
+      const target = e.target;
+      const value = target.value;
+      setSearchbar((prevState)=>{
+         return {...prevState, search:value}
+      });
+   }
+   const onSearch = (e) =>{
+      e.preventDefault();
+      const prodCopy = [...productsList]
+      setTypeSelection([]);
+      if (searchbar===""){
+         updateProductCards(0, prodCopy.length, prodCopy);
+      } else{
+         const searchedProd= prodCopy.filter((eachData)=>{
+            return eachData.name.toLowerCase().includes(searchbar.search.toLowerCase())
+         })
+         updateProductCards(0,searchedProd.length,searchedProd)
+      }
+   }
 
    return (
       <Container>
@@ -98,7 +127,7 @@ function Product(){
                >
                <OffcanvasHeader
                   closeButton>
-                  Text
+                  Browse Products By
                </OffcanvasHeader>
                <OffcanvasBody>
                   <Select
@@ -112,13 +141,34 @@ function Product(){
                </OffcanvasBody>
             </Offcanvas>
             <Card.Body>
-               <h1>
-                  Products
-               </h1>
+               <Row className="product-row d-flex justify-content-between align-items-end mb-3"
+               >
+                  <Col className="product-col">
+                     <h1>
+                     Products
+                     </h1>
+                  </Col>
+                  <Col className="product-col">
+                     <Form>
+                        <div className="form-group">
+                           <div className="d-flex justify-content-between">
+                              <Form.Control
+                                 name="search"
+                                 value={searchbar.search}
+                                 onChange={onFieldChange}
+                                 className="form-control"
+                              />
+                           <button type="button" className="btn primary-color" onClick={onSearch}>Search</button>  
+                           </div>
+                        </div>  
+                     </Form>                                    
+                  </Col>   
+               </Row>
                <Row>
                   <Col className="product-row text-center product-col d-flex justify-content-between align-items-center">
                      <button 
                         className="btn btn-sm primary-color"
+                        type="button"
                         onClick={handleShow}
                         >Filter Options</button>
                      <Pagination
@@ -126,16 +176,15 @@ function Product(){
                         current={products.index}
                         pageSize={products.size}
                         total={products.total}
+                        className="ant-pagination"
                      />  
                   </Col>
                </Row>
                <Row className="product-row d-flex justify-content-around">
                   {!products.data[0] &&
-                     <div style={{height:"500px"}}>
-                        <h4>No results</h4>
-                     </div>
+                     <h4>No results</h4>
                   }   
-                     {products.cards} 
+                  {products.cards} 
                </Row>
                
             </Card.Body>

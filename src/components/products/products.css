@@ -26,3 +26,6 @@
    height: 300px;
    object-fit: cover;
 }
+.page-card.product{
+   min-height: 800px;
+}
