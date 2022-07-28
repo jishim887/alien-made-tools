@@ -29,3 +29,33 @@
 .page-card.product{
    min-height: 800px;
 }
+.product-card .badge{
+   margin: 6px;
+   font-size: small;
+   background: rgba(255,255,255,0.5);
+   -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
+   border: 1px solid rgba(255,255,255,0.25);
+   color: black;  
+}
+.badge-list{
+   position: absolute;
+}
+/* .Stone-badge{
+   background: rgba(255,255,255,0.5);
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255,255,255,0.25);
+}
+.Machine-badge{
+   background: rgba(255,255,255,0.5);
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255,255,255,0.25);
+}
+.Construction-badge{
+   background-color: rgb(40, 103, 40);
+}
+.Drill-badge{
+   background-color: rgb(128, 0, 100);
+} */

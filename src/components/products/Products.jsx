@@ -166,7 +166,7 @@ function Product(){
                                  onChange={onFieldChange}
                                  className="form-control"
                               />
-                           <button type="button" className="btn primary-color" onClick={onSearch}>Search</button>  
+                           <button type="button" className="ms-2 btn primary-color" onClick={onSearch}>Search</button>  
                            </div>
                         </div>  
                      </Form>                                    
