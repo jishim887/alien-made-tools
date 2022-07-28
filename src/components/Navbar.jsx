@@ -63,6 +63,15 @@ function Navbar(){
                   <li className="nav-item">
                      <button
                         className="nav-link px-2 text-white link-button"
+                        data-page="/faq"
+                        onClick={goToPage}
+                     >
+                        FAQ
+                     </button>
+                  </li>
+                  <li className="nav-item">
+                     <button
+                        className="nav-link px-2 text-white link-button"
                         data-page="/contactus"
                         onClick={goToPage}
                      >

@@ -1,8 +1,8 @@
 .product-card{
    width: 20em;
    padding: 0;
-   margin-right: 6px;
-   margin-left: 6px;
+   margin-right: 3px;
+   margin-left: 3px;
    margin-bottom: 24px;
 }
 .product-card img{
@@ -23,7 +23,7 @@
 }
 
 .detail img{
-   height: 300px;
+   width: auto;
    object-fit: cover;
 }
 .page-card.product{

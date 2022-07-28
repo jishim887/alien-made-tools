@@ -40,7 +40,7 @@ button.link-button {
    background-color: #5d9700;
  }
  .light-color{
-   background-color: #d7ecf4;
+   background-color: #eaeaea;
  }
  /* https://colorpalettes.net/color-palette-4347/ */
  .warning-color{
@@ -49,8 +49,8 @@ button.link-button {
  .page-card{
    margin-top: 50px;
    margin-bottom: 50px;
-   padding-right:50px;
-   padding-left:50px;
+   padding-right:5%;
+   padding-left:5%;
    padding-top: 30px;
    padding-bottom: 30px;
    min-height:400px;

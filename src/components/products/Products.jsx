@@ -140,15 +140,23 @@ function Product(){
                      />
                </OffcanvasBody>
             </Offcanvas>
-            <Card.Body>
-               <Row className="product-row d-flex justify-content-between align-items-end mb-3"
+            <Card.Body style={{padding: "0"}}>
+               <Row className="product-row d-flex justify-content-between align-items-end"
                >
-                  <Col className="product-col">
+                  <Col md={4} className="product-col mb-3">
                      <h1>
                      Products
                      </h1>
                   </Col>
-                  <Col className="product-col">
+                  <Col md={4} className ="product-col mb-3 text-center">
+                     <button 
+                        className="btn btn-sm primary-color"
+                        type="button"
+                        onClick={handleShow}
+                        style={{width: "150px"}}
+                        >Filter Options</button>
+                  </Col>
+                  <Col md={4} className="product-col mb-3">
                      <Form>
                         <div className="form-group">
                            <div className="d-flex justify-content-between">
@@ -164,13 +172,8 @@ function Product(){
                      </Form>                                    
                   </Col>   
                </Row>
-               <Row>
-                  <Col className="product-row text-center product-col d-flex justify-content-between align-items-center">
-                     <button 
-                        className="btn btn-sm primary-color"
-                        type="button"
-                        onClick={handleShow}
-                        >Filter Options</button>
+               <Row className="text-center product-row d-flex justify-content-between align-items-end">
+                  <Col className="product-col mb-3">
                      <Pagination
                         onChange={onPageChange}
                         current={products.index}

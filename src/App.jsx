@@ -8,6 +8,8 @@ import About from "./components/About"
 import Products from "./components/products/Products"
 import ProductDetail from "./components/products/ProductDetail"
 import ContactUs from "./components/ContactUs"
+import Faq from "./components/Faq"
+
 
 import './App.css';
 
@@ -22,6 +24,7 @@ function App() {
             <Route path="/about" element={<About/>}/>
             <Route path="/products" element={<Products/>}/>
             <Route path="/products/:id" element={<ProductDetail/>}/>
+            <Route path="/faq" element={<Faq/>}/>
             <Route path="/contactus" element={<ContactUs/>}/>
          </Routes>
       </main>
