@@ -3,12 +3,12 @@ import stone002 from "../../assets/images/products/stone/stone (2).png"
 import stone003 from "../../assets/images/products/stone/stone (3).png"
 import stone004 from "../../assets/images/products/stone/stone (4).png"
 import stone005 from "../../assets/images/products/stone/stone (5).png"
-import stonetable001 from "../../assets/images/tables/stone/stone001.png"
-import stonetable002 from "../../assets/images/tables/stone/stone002.png"
-import stonetable003 from "../../assets/images/tables/stone/stone003.png"
-import stonetable004 from "../../assets/images/tables/stone/stone004.png"
-import stonetable005 from "../../assets/images/tables/stone/stone005.png"
-import stonetable006 from "../../assets/images/tables/stone/stone006.png"
+// import stonetable001 from "../../assets/images/tables/stone/stone001.png"
+// import stonetable002 from "../../assets/images/tables/stone/stone002.png"
+// import stonetable003 from "../../assets/images/tables/stone/stone003.png"
+// import stonetable004 from "../../assets/images/tables/stone/stone004.png"
+// import stonetable005 from "../../assets/images/tables/stone/stone005.png"
+// import stonetable006 from "../../assets/images/tables/stone/stone006.png"
 
 import construction001 from "../../assets/images/products/construction/construction (1).png"
 import construction002 from "../../assets/images/products/construction/construction (2).png"
@@ -17,8 +17,8 @@ import construction004 from "../../assets/images/products/construction/construct
 
 import floorprep001 from "../../assets/images/products/floorprep/floorprep (1).png"
 import floorprep002 from "../../assets/images/products/floorprep/floorprep (2).png"
-import floorpreptable001 from "../../assets/images/tables/floorprep/floorprep001.png"
-import floorpreptable002 from "../../assets/images/tables/floorprep/floorprep002.png"
+// import floorpreptable001 from "../../assets/images/tables/floorprep/floorprep001.png"
+// import floorpreptable002 from "../../assets/images/tables/floorprep/floorprep002.png"
 
 import coredrill001 from "../../assets/images/products/coredrill/coredrill (1).png"
 import coredrill002 from "../../assets/images/products/coredrill/coredrill (2).png"
@@ -36,7 +36,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:stonetable001,
+      table:"",
    },
    {
       id: 2,
@@ -45,7 +45,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:stonetable002,
+      table:"",
    },
    {
       id: 3,
@@ -54,7 +54,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:stonetable003,
+      table:"",
    },
    {
       id: 4,
@@ -63,7 +63,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:stonetable004,
+      table:"",
    },
    {
       id: 5,
@@ -72,7 +72,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:stonetable005,
+      table:"",
    },
    {
       id: 6,
@@ -81,7 +81,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:stonetable006,
+      table:"",
    },
 ];
 const constructionList = [
@@ -130,7 +130,7 @@ const floorprepList = [
       type:[
          "Floor Prep",
       ],
-      table:floorpreptable001,
+      table:"",
    },
    {
       id: 2002,
@@ -139,7 +139,7 @@ const floorprepList = [
       type:[
          "Floor Prep",
       ],
-      table:floorpreptable002,
+      table:"",
    },
 ];
 const coredrillList = [

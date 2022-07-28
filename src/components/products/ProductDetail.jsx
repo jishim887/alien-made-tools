@@ -6,7 +6,6 @@ import {productsList} from "./productsList"
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 import noimage from "../../assets/images/products/noimage.jpg"
-import header from "../../assets/images/tables/stone/header.png"
 import "./products.css";
 
 function ProductDetail(){
@@ -60,9 +59,9 @@ function ProductDetail(){
                   <Col>
                      <h4>Product Information</h4>
                      <SimpleBar style = {{width:"100%"}}>
-                        {product.type[0] === "Stone" && <img src={header} alt="table header" className="product-table"/>}
                         <img src={product.table} alt="product table" className="product-table"/>
                      </SimpleBar>
+                     <div>{`* Please contact us for the information on pricing and shipping.`}</div>
                      
                   </Col>
                </Row>

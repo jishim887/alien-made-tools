@@ -16,6 +16,10 @@ function Faq(){
       question: "How can the products be purchased?",
       answer:"All products must be purchased by contacting us at email@email.com. Any questions regarding the specifications of any product must also be addressed to the same email."
    },
+   {
+      question: "How is shipping handled?",
+      answer:"Please contact us through our email for details."
+   },
    ])
 
    const[faqCard, setFaqCard] = useState([])
