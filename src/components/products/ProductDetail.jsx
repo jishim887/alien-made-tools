@@ -8,7 +8,6 @@ import "simplebar/dist/simplebar.min.css";
 import noimage from "../../assets/images/products/noimage.jpg"
 import header from "../../assets/images/tables/stone/header.png"
 import "./products.css";
-import { propTypes } from "react-bootstrap/esm/Image";
 
 function ProductDetail(){
    const [productId] = useParams().id;
