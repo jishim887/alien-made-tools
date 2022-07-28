@@ -17,6 +17,7 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.4.0",
     "react-twemoji": "^0.5.0",
+    "simplebar-react": "^2.4.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

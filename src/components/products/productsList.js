@@ -2,14 +2,27 @@ import stone001 from "../../assets/images/products/stone/stone (1).png"
 import stone002 from "../../assets/images/products/stone/stone (2).png"
 import stone003 from "../../assets/images/products/stone/stone (3).png"
 import stone004 from "../../assets/images/products/stone/stone (4).png"
+import stone005 from "../../assets/images/products/stone/stone (5).png"
+import stonetable001 from "../../assets/images/tables/stone/stone001.png"
+import stonetable002 from "../../assets/images/tables/stone/stone002.png"
+import stonetable003 from "../../assets/images/tables/stone/stone003.png"
+import stonetable004 from "../../assets/images/tables/stone/stone004.png"
+import stonetable005 from "../../assets/images/tables/stone/stone005.png"
+import stonetable006 from "../../assets/images/tables/stone/stone006.png"
+
 import construction001 from "../../assets/images/products/construction/construction (1).png"
 import construction002 from "../../assets/images/products/construction/construction (2).png"
 import construction003 from "../../assets/images/products/construction/construction (3).png"
 import construction004 from "../../assets/images/products/construction/construction (4).png"
+
 import floorprep001 from "../../assets/images/products/floorprep/floorprep (1).png"
 import floorprep002 from "../../assets/images/products/floorprep/floorprep (2).png"
+import floorpreptable001 from "../../assets/images/tables/floorprep/floorprep001.png"
+import floorpreptable002 from "../../assets/images/tables/floorprep/floorprep002.png"
+
 import coredrill001 from "../../assets/images/products/coredrill/coredrill (1).png"
 import coredrill002 from "../../assets/images/products/coredrill/coredrill (2).png"
+
 // import coredrill003 from "../../assets/images/products/coredrill/coredrill (3).png"
 
 import machine001 from "../../assets/images/products/machine/machine (1).png"
@@ -23,7 +36,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:"",
+      table:stonetable001,
    },
    {
       id: 2,
@@ -32,7 +45,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:"",
+      table:stonetable002,
    },
    {
       id: 3,
@@ -41,7 +54,7 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:"",
+      table:stonetable003,
    },
    {
       id: 4,
@@ -50,25 +63,25 @@ const stoneList = [
       type:[
          "Stone",
       ],
-      table:"",
+      table:stonetable004,
    },
    {
       id: 5,
       name: "DRY Turbo SHAPE",
-      image: stone003,
-      type:[
-         "Stone",
-      ],
-      table:"",
-   },
-   {
-      id: 6,
-      name: "DRY T SHAPE CORE DRILL WITH SIDE PROTECTION",
       image: stone004,
       type:[
          "Stone",
       ],
-      table:"",
+      table:stonetable005,
+   },
+   {
+      id: 6,
+      name: "DRY T SHAPE CORE DRILL WITH SIDE PROTECTION",
+      image: stone005,
+      type:[
+         "Stone",
+      ],
+      table:stonetable006,
    },
 ];
 const constructionList = [
@@ -117,7 +130,7 @@ const floorprepList = [
       type:[
          "Floor Prep",
       ],
-      table:"",
+      table:floorpreptable001,
    },
    {
       id: 2002,
@@ -126,7 +139,7 @@ const floorprepList = [
       type:[
          "Floor Prep",
       ],
-      table:"",
+      table:floorpreptable002,
    },
 ];
 const coredrillList = [

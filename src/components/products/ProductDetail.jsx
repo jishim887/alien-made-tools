@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import {Container, Card, Row, Col} from "react-bootstrap"
 import {useLocation, useParams, Link} from "react-router-dom"
 import {productsList} from "./productsList"
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.min.css";
 import noimage from "../../assets/images/products/noimage.jpg"
-
-
+import header from "../../assets/images/tables/stone/header.png"
 import "./products.css";
+import { propTypes } from "react-bootstrap/esm/Image";
 
 function ProductDetail(){
    const [productId] = useParams().id;
@@ -14,7 +16,7 @@ function ProductDetail(){
       id:0,
       name:"",
       description:"",
-      type:""
+      type:[]
    })
    const {state} = useLocation();
 
@@ -52,13 +54,17 @@ function ProductDetail(){
                <Row className="mb-3">
                   <Col>
                      <h1>{product.name}</h1>
-                     <img src={product.image||noimage} alt="product detail"/>
+                     <img src={product.image||noimage} className="detail-image" alt="product detail"/>
                   </Col>
                </Row>
                <Row>
                   <Col>
                      <h4>Product Information</h4>
-                     <img src={product.table} alt="product table"/>
+                     <SimpleBar style = {{width:"100%"}}>
+                        {product.type[0] === "Stone" && <img src={header} alt="table header" className="product-table"/>}
+                        <img src={product.table} alt="product table" className="product-table"/>
+                     </SimpleBar>
+                     
                   </Col>
                </Row>
             </Card.Body>

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React 
 , {useEffect, useState}
 from "react";
@@ -33,7 +34,6 @@ function ProductCard(props){
             </div>
          <Card.Body>
             <h4>{props.product.name}</h4>
-            
          </Card.Body>
       </Card>
    )

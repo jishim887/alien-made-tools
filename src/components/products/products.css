@@ -1,5 +1,5 @@
 .product-card{
-   width: 20em;
+   width: 22em;
    padding: 0;
    margin-right: 3px;
    margin-left: 3px;
@@ -22,16 +22,19 @@
    margin-bottom:24px;
 }
 
-.detail img{
-   width: auto;
-   object-fit: cover;
+.detail-image{
+   min-height: 300px;
+   max-height: 500px;
+   object-fit: contain;
 }
+/* .product-table{
+} */
 .page-card.product{
    min-height: 800px;
 }
 .product-card .badge{
    margin: 6px;
-   font-size: small;
+   font-size: medium;
    background: rgba(255,255,255,0.5);
    -webkit-backdrop-filter: blur(10px);
    backdrop-filter: blur(10px);
